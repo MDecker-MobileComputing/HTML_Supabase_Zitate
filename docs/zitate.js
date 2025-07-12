@@ -4,6 +4,9 @@ let pZitat = null;
 let pAutor = null;
 
 
+/**
+ * Event-Handler, der aufgerufen wird, wenn die Webseite geladen wurde.
+ */
 window.addEventListener( "load", async function () {
 
     pZitat = document.getElementById( "zitatText"  );
@@ -14,6 +17,9 @@ window.addEventListener( "load", async function () {
 });
 
 
+/**
+ * Zitat von Supabase laden und auf der Webseite anzeigen.
+ */
 async function zitatLaden() {
 
     const supabaseClient = supabase.createClient(
@@ -39,10 +45,14 @@ async function zitatLaden() {
 }
 
 
+/**
+ * Hilfsfunktion zum Anzeigen eines Fehlers auf JavaScript-Konsole
+ * und auf Webseite.
+ */
 function zeigeFehler( fehler ) {
 
     console.error( fehler );
 
-    pZitat.textContent = "Fehler beim Laden des Zitats.";
+    pZitat.textContent = "Fehler: " + fehler;
     pAutor.textContent = "";
 }

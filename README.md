@@ -3,7 +3,7 @@
 <br>
 
 Diese Repo enthält eine Webseite, die beim Aufruf ein zufälliges Zitat von einem
-auf Supabase gehosteten Backend zurückliefert.
+auf [Supabase](https://supabase.com/) gehosteten Backend zurückliefert.
 
 <br>
 
@@ -24,18 +24,12 @@ CREATE TABLE zitate (
 
 <br>
 
-Beispieldatensätze in Tabelle laden:
-```
-INSERT INTO "public"."zitate" ("id", "zitat", "autor") VALUES 
-('1', 'The universe is a big place, perhaps the biggest.', 'Kurt Vonnegut'),
-('2', 'Behind every great man is a woman rolling her eyes.', 'Jim Carrey'),
-('3', 'Imagination is more important than knowledge.', 'Albert Einstein'),
-('5', 'If it weren''t for electricity we''d all be watching television by candlelight.', 'George Gobel');
-```
+Beispieldatensätze in Tabelle laden: siehe [insert.sql](insert.sql).
 
 <br>
 
 RPC-Funktion anlegen (weil `ORDER BY RANDOM()` nicht über JavaScript-API aufgerufen werden kann):
+
 
 ```
 CREATE OR REPLACE FUNCTION get_zufaelliges_zitat()
