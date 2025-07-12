@@ -7,6 +7,11 @@ auf [Supabase](https://supabase.com/) gehosteten Backend zurückliefert.
 
 <br>
 
+Web-App via *GitHub Pages*: 
+[hier](https://mdecker-mobilecomputing.github.io/HTML_Supabase_Zitate/)
+
+<br>
+
 ----
 
 ## Anlegen Datenbanktabelle ##
