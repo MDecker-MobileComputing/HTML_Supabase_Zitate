@@ -21,25 +21,21 @@ async function zitatLaden() {
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFubnltZ2tibnJrbnZram5oZGh5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyNDM4NzAsImV4cCI6MjA2NzgxOTg3MH0.tJTJmU_jrlEBHpFk3_TUWVLyvVDLoVPk64Dnq7hgf6U"
     );
 
-    const { data, fehler } = await supabaseClient.from( "zitate" )
-                                                 .select( "zitat,autor" )
-                                                 //.order( "random()" )
-                                                 .limit( 1 )
-                                                 .single();
+    const { data, fehler } = await supabaseClient.rpc( "get_zufaelliges_zitat" );
     if ( fehler ) {
 
         zeigeFehler( fehler );
         return;
     }
 
-    if ( !data ) {
+    if ( !data || data.length === 0 ) {
 
         zeigeFehler( "Leere Antwort von Server erhalten." );
         return;
     }
 
-    pZitat.textContent = data.zitat;
-    pAutor.textContent = data.autor;
+    pZitat.textContent = data[0].zitat;
+    pAutor.textContent = data[0].autor;
 }
 
 
