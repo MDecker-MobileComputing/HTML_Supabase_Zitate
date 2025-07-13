@@ -85,6 +85,13 @@ $$ LANGUAGE plpgsql;
 
 <br>
 
+Zum Testen kann diese Prozedur über den folgenden SQL-Befehl ausgeführt werden:
+```
+SELECT health_check()
+```
+
+<br>
+
 Der hiermit definierte REST-Endpunkt mit `HTTP-GET` unter der folgenden URL aufgerufen werden:
 
   https://annymgkbnrknvkjnhdhy.supabase.co/rest/v1/rpc/health_check
@@ -102,6 +109,13 @@ definierten Request "Health Check".
   "zeitstempel"  : "2025-07-13T09:50:57.613117+00:00",
   "anzahl_zitate": 12
 }
+```
+
+<br>
+
+Zum Testen kann diese Prozedur über den folgenden SQL-Befehl ausgeführt werden:
+```
+SELECT get_zufaelliges_zitat()
 ```
 
 <br>
