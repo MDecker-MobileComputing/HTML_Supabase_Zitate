@@ -48,8 +48,10 @@ END;
 $$ LANGUAGE plpgsql;
 ```
 
-Diese Funktion ist mit [PL/pgSQL](https://www.postgresql.org/docs/current/plpgsql.html), der prozeduralen
-Sprache der Postgres-Datenbank, geschrieben.
+<br>
+
+Diese Funktion ist mit [PL/pgSQL](https://www.postgresql.org/docs/current/plpgsql.html), 
+der prozeduralen Sprache der Postgres-Datenbank, geschrieben.
 
 <br>
 
@@ -107,7 +109,6 @@ definierten Request "Health Check".
 Diese Check kann auch regelmäßig mit *GitHub Actions* ausgeführt werden, 
 siehe [diese Workflow-Datei](.github/workflows/healthcheck.yml).
 Hierfür muss aber in den Repo-Einstelllungen unter "Secrets and variables | Actions"
-(siehe [hier](https://github.com/MDecker-MobileComputing/HTML_Supabase_Zitate/settings/secrets/actions))
 eine Variable mit Namen `SUPABASE_API_KEY` angelegt werden, die den API-Key
 des Supabase-Projekts enthält.
 
