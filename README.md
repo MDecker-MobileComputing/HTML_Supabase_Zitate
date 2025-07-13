@@ -59,6 +59,9 @@ Sprache der Postgres-Datenbank, geschrieben.
 
 <br>
 
+In SQL-Konsole von Supabase-Projekt folgenden PL/pgSQL-Befehl ausführen, um einen REST-Endpunkt
+für die Überwachung anzulegen:
+
 ```
 CREATE OR REPLACE FUNCTION health_check()
 RETURNS JSON AS $$
@@ -73,6 +76,7 @@ BEGIN
     'zeitstempel'     , NOW(),
     'anzahl_zitate'   , anzahl_datensaetze
   );
+
 END;
 $$ LANGUAGE plpgsql;
 ```
@@ -89,7 +93,7 @@ definierten Request "Health Check".
 
 <br>
 
-Beispielantwort:
+**Beispielantwort:**
 ```
 {
   "zustand"      : "okay",
@@ -101,7 +105,11 @@ Beispielantwort:
 <br>
 
 Diese Check kann auch regelmäßig mit *GitHub Actions* ausgeführt werden, 
-siehe [diese Workflow-Datei](.github/workflows/healthcheck.yml),
+siehe [diese Workflow-Datei](.github/workflows/healthcheck.yml).
+Hierfür muss aber in den Repo-Einstelllungen unter "Secrets and variables | Actions"
+(siehe [hier](https://github.com/MDecker-MobileComputing/HTML_Supabase_Zitate/settings/secrets/actions))
+eine Variable mit Namen `SUPABASE_API_KEY` angelegt werden, die den API-Key
+des Supabase-Projekts enthält.
 
 <br>
 
