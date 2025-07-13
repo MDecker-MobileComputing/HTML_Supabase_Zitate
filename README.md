@@ -90,7 +90,7 @@ Der hiermit definierte REST-Endpunkt mit `HTTP-GET` unter der folgenden URL aufg
   https://annymgkbnrknvkjnhdhy.supabase.co/rest/v1/rpc/health_check
 
 Es sind dabei aber die beiden HTTP-Header-Felder `apikey` und `Authorization` zu setzen,
-siehe auch den in [dieser Datei für den *Talend API Tester*](TalendApiTest-SupabaseZitate.json)
+siehe auch den in [dieser Datei für den *Talend API Tester*](TalendApiTester-SupabaseZitate.json)
 definierten Request "Health Check".
 
 <br>

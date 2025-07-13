@@ -4,7 +4,7 @@
     {
       "entity": {
         "type": "Project",
-        "id": "171d3e46-ac83-40ce-a8d4-975c7fdf7682",
+        "id": "877f2905-4a6f-48d3-998c-3ed3a48f0206",
         "name": "supabase-zitate"
       },
       "children": [
@@ -36,7 +36,7 @@
               "host": "annymgkbnrknvkjnhdhy.supabase.co",
               "path": "/rest/v1/zitate"
             },
-            "id": "46d0a52c-856f-4e12-94c9-04d0f93d7256",
+            "id": "3ea68fcd-5540-4272-b4d9-ea3f51b1bbdf",
             "name": "Alle Zitate",
             "headers": [
               {
@@ -80,7 +80,7 @@
               "host": "annymgkbnrknvkjnhdhy.supabase.co",
               "path": "/rest/v1/rpc/health_check"
             },
-            "id": "d43bf527-8b5b-4356-a49a-ba0bbbdc4264",
+            "id": "c479a13a-262d-4e42-8790-b222dd034d0c",
             "name": "Health Check",
             "headers": [
               {
@@ -126,7 +126,7 @@
               "host": "annymgkbnrknvkjnhdhy.supabase.co",
               "path": "/rest/v1/zitate"
             },
-            "id": "598bbe00-1897-4424-9fa6-83f40398c65b",
+            "id": "5d77210f-ac26-4ed1-9fd2-4cde2d9d5c48",
             "name": "Neues Zitat",
             "headers": [
               {
@@ -148,6 +148,50 @@
                 "enabled": true,
                 "name": "",
                 "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "annymgkbnrknvkjnhdhy.supabase.co",
+              "path": "/rest/v1/rpc/health_check"
+            },
+            "id": "21a24916-8f29-4584-b710-bd621859f738",
+            "name": "Zufälliges Zitat via RPC",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFubnltZ2tibnJrbnZram5oZGh5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyNDM4NzAsImV4cCI6MjA2NzgxOTg3MH0.tJTJmU_jrlEBHpFk3_TUWVLyvVDLoVPk64Dnq7hgf6U"
+              },
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "Bearer: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFubnltZ2tibnJrbnZram5oZGh5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyNDM4NzAsImV4cCI6MjA2NzgxOTg3MH0.tJTJmU_jrlEBHpFk3_TUWVLyvVDLoVPk64Dnq7hgf6U"
               }
             ]
           }
