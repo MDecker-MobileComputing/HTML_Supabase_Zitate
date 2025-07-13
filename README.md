@@ -55,6 +55,53 @@ Sprache der Postgres-Datenbank, geschrieben.
 
 ----
 
+## REST-Endpunkt für Monitoring ##
+
+<br>
+
+```
+CREATE OR REPLACE FUNCTION health_check()
+RETURNS JSON AS $$
+DECLARE
+  anzahl_datensaetze INTEGER;
+BEGIN
+  -- Get the count of records in zitate table
+  SELECT COUNT(*) INTO anzahl_datensaetze FROM zitate;
+  
+  RETURN json_build_object(
+    'zustand'         , 'okay',
+    'zeitstempel'     , NOW(),
+    'anzahl_zitate'   , anzahl_datensaetze
+  );
+END;
+$$ LANGUAGE plpgsql;
+```
+
+<br>
+
+Der hiermit definierte REST-Endpunkt mit `HTTP-GET` unter der folgenden URL aufgerufen werden:
+
+  https://annymgkbnrknvkjnhdhy.supabase.co/rest/v1/rpc/health_check
+
+Es sind dabei aber die beiden HTTP-Header-Felder `apikey` und `Authorization` zu setzen,
+siehe auch den in [dieser Datei für den *Talend API Tester*](TalendApiTest-SupabaseZitate.json)
+definierten Request "Health Check".
+
+<br>
+
+Beispielantwort:
+```
+{
+  "zustand": "okay",
+  "zeitstempel": "2025-07-13T09:50:57.613117+00:00",
+  "anzahl_zitate": 12
+}
+```
+
+<br>
+
+----
+
 ## License ##
 
 <br>

@@ -4,7 +4,7 @@
     {
       "entity": {
         "type": "Project",
-        "id": "59790086-b1bf-4d15-b1f8-bb8bfdba1a56",
+        "id": "171d3e46-ac83-40ce-a8d4-975c7fdf7682",
         "name": "supabase-zitate"
       },
       "children": [
@@ -36,8 +36,52 @@
               "host": "annymgkbnrknvkjnhdhy.supabase.co",
               "path": "/rest/v1/zitate"
             },
-            "id": "4901f5d9-10b1-4c88-a53f-af8ecf0e8456",
+            "id": "46d0a52c-856f-4e12-94c9-04d0f93d7256",
             "name": "Alle Zitate",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "apikey",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFubnltZ2tibnJrbnZram5oZGh5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyNDM4NzAsImV4cCI6MjA2NzgxOTg3MH0.tJTJmU_jrlEBHpFk3_TUWVLyvVDLoVPk64Dnq7hgf6U"
+              },
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "Bearer: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFubnltZ2tibnJrbnZram5oZGh5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyNDM4NzAsImV4cCI6MjA2NzgxOTg3MH0.tJTJmU_jrlEBHpFk3_TUWVLyvVDLoVPk64Dnq7hgf6U"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "annymgkbnrknvkjnhdhy.supabase.co",
+              "path": "/rest/v1/rpc/health_check"
+            },
+            "id": "d43bf527-8b5b-4356-a49a-ba0bbbdc4264",
+            "name": "Health Check",
             "headers": [
               {
                 "enabled": true,
@@ -82,7 +126,7 @@
               "host": "annymgkbnrknvkjnhdhy.supabase.co",
               "path": "/rest/v1/zitate"
             },
-            "id": "d1d4af7a-ca51-4c10-add4-e295f643dfe4",
+            "id": "598bbe00-1897-4424-9fa6-83f40398c65b",
             "name": "Neues Zitat",
             "headers": [
               {
