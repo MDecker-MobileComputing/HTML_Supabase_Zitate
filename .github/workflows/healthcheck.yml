@@ -15,3 +15,6 @@ jobs:
 
 # API-KEY für Repo setzen unter
 # https://github.com/MDecker-MobileComputing/HTML_Supabase_Zitate/settings/secrets/actions
+#
+# Wenn die Supabase-Instanz nicht erreichbar ist, dann schlägt der CURL-Befehl mit
+# folgender Fehlermeldung fehl: Could not resolve host: annymgkbnrknvkjnhdhy.supabase.co
