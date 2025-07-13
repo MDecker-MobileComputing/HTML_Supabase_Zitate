@@ -65,7 +65,7 @@ RETURNS JSON AS $$
 DECLARE
   anzahl_datensaetze INTEGER;
 BEGIN
-  -- Get the count of records in zitate table
+
   SELECT COUNT(*) INTO anzahl_datensaetze FROM zitate;
   
   RETURN json_build_object(
@@ -92,11 +92,16 @@ definierten Request "Health Check".
 Beispielantwort:
 ```
 {
-  "zustand": "okay",
-  "zeitstempel": "2025-07-13T09:50:57.613117+00:00",
+  "zustand"      : "okay",
+  "zeitstempel"  : "2025-07-13T09:50:57.613117+00:00",
   "anzahl_zitate": 12
 }
 ```
+
+<br>
+
+Diese Check kann auch regelmäßig mit *GitHub Actions* ausgeführt werden, 
+siehe [diese Workflow-Datei](.github/workflows/healthcheck.yml),
 
 <br>
 

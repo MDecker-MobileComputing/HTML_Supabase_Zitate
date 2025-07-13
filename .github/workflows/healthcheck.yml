@@ -1,7 +1,7 @@
-name: Überprüfe den Status der Supabase-Instanz
+name: Healthcheck für Supabase-Instanz
 on:
   schedule:
-    - cron: '42 12 */4 * *'  # Alle 4 Tage um 12:42 UTC
+    - cron: '42 12 */4 * *'  # Jeden 4. Tag im Monat um 12:42 UTC
   workflow_dispatch:  # Manuelle Auslösung ermöglichen
 jobs:
   ping:
