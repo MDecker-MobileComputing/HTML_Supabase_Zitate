@@ -35,7 +35,6 @@ Beispieldatensätze in Tabelle laden: siehe [insert.sql](insert.sql).
 
 RPC-Funktion anlegen (weil `ORDER BY RANDOM()` nicht über JavaScript-API aufgerufen werden kann):
 
-
 ```
 CREATE OR REPLACE FUNCTION get_zufaelliges_zitat()
 RETURNS TABLE(zitat TEXT, autor TEXT) AS $$
@@ -48,6 +47,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 ```
+
+Diese Funktion ist mit [PL/pgSQL](https://www.postgresql.org/docs/current/plpgsql.html), der prozeduralen
+Sprache der Postgres-Datenbank, geschrieben.
 
 <br>
 
