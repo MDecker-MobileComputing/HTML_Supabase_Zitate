@@ -1,0 +1,17 @@
+name: Überprüfe den Status der Supabase-Instanz
+on:
+  schedule:
+    - cron: '42 12 */4 * *'  # Alle 4 Tage um 12:42 UTC
+  workflow_dispatch:  # Manuelle Auslösung ermöglichen
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Health-Endpunkt aufrufen
+        run: |
+          curl -X GET https://annymgkbnrknvkjnhdhy.supabase.co/rest/v1/rpc/health_check \
+            -H "apikey: ${{ secrets.SUPABASE_API_KEY }}" \
+            -H "Content-Type: application/json"
+
+# API-KEY für Repo setzen unter
+# https://github.com/MDecker-MobileComputing/HTML_Supabase_Zitate/settings/secrets/actions
