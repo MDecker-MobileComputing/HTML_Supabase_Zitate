@@ -55,6 +55,13 @@ der prozeduralen Sprache der Postgres-Datenbank, geschrieben.
 
 <br>
 
+Funktion testen (liefert nur ein Zitat zurück, wenn sich mindestens ein Datensatz in der Tabelle `zitate` befindet):
+```
+SELECT * FROM get_zufaelliges_zitat();
+```
+
+<br>
+
 ----
 
 ## REST-Endpunkt für Monitoring ##
