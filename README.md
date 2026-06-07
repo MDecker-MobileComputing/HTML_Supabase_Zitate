@@ -40,10 +40,10 @@ CREATE OR REPLACE FUNCTION get_zufaelliges_zitat()
 RETURNS TABLE(zitat TEXT, autor TEXT) AS $$
 BEGIN
   RETURN QUERY
-  SELECT z.zitat, z.autor
-  FROM zitate z
-  ORDER BY RANDOM()
-  LIMIT 1;
+    SELECT z.zitat, z.autor
+      FROM zitate z
+      ORDER BY RANDOM()
+      LIMIT 1;
 END;
 $$ LANGUAGE plpgsql;
 ```
