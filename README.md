@@ -12,6 +12,10 @@ Web-App via *GitHub Pages*:
 
 <br>
 
+siehe auch [diese Ionic/Angular-App](https://github.com/MDecker-MobileComputing/Ionic_ZitateVonSupabase)
+
+<br>
+
 ----
 
 ## Anlegen Datenbanktabelle ##
